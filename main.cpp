@@ -50,7 +50,6 @@ namespace
 
 int main(int argc, char *argv[])
 {
-    std::cout << "wtf";
     glfwSetErrorCallback(errorCallback);
 
     GLFWwindow *window = initialize();
