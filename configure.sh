@@ -1,3 +1,8 @@
 #! /bin/sh
+build_type="$1"
 
-cmake -DCMAKE_BUILD_TYPE=Debug -S . -B build; cd ..
+if [ -z "$build_type" ]; then
+    build_type="Debug"
+fi
+
+cmake -DCMAKE_BUILD_TYPE=$build_type -S . -B build; cd ..

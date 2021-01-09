@@ -1,9 +1,9 @@
 # Project definition
 cmake_minimum_required(VERSION 3.19.2)
-project(ECS)
+project(starter)
 
 # Source files
-set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
+set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external")
 set(SOURCES "${SRC_DIR}/main.cpp")
 

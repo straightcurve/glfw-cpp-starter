@@ -1,3 +1,3 @@
 #! /bin/sh
 
-cd build; ./ECS
+cd build; ./starter

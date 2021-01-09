@@ -8,7 +8,7 @@
             "name": "clang++ - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "build/ECS",
+            "program": "build/starter",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -22,7 +22,7 @@
                     "ignoreFailures": true,
                 }
             ],
-            "preLaunchTask": "build-ecs",
+            "preLaunchTask": "build-starter",
             "miDebuggerPath": "/usr/bin/gdb",
         }
     ]
