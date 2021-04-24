@@ -1,5 +1,5 @@
 # Project definition
-cmake_minimum_required(VERSION 3.19.2)
+cmake_minimum_required(VERSION 3.16.5)
 project(starter)
 
 # Source files

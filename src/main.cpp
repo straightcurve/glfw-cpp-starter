@@ -1,21 +1,15 @@
-#include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <iostream>
+#include <glad/glad.h>
+#include <cstdio>
 
-#include <stdio.h>
-
-namespace
-{
-    void errorCallback(int error, const char *description)
-    {
+namespace {
+    void errorCallback(int error, const char *description) {
         fprintf(stderr, "GLFW error %d: %s\n", error, description);
     }
 
-    GLFWwindow *initialize()
-    {
+    GLFWwindow *initialize() {
         int glfwInitRes = glfwInit();
-        if (!glfwInitRes)
-        {
+        if (!glfwInitRes) {
             fprintf(stderr, "Unable to initialize GLFW\n");
             return nullptr;
         }
@@ -26,8 +20,7 @@ namespace
         glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
         GLFWwindow *window = glfwCreateWindow(1280, 720, "ECS", nullptr, nullptr);
-        if (!window)
-        {
+        if (!window) {
             fprintf(stderr, "Unable to create GLFW window\n");
             glfwTerminate();
             return nullptr;
@@ -36,8 +29,7 @@ namespace
         glfwMakeContextCurrent(window);
 
         int gladInitRes = gladLoadGL();
-        if (!gladInitRes)
-        {
+        if (!gladInitRes) {
             fprintf(stderr, "Unable to initialize glad\n");
             glfwDestroyWindow(window);
             glfwTerminate();
@@ -48,8 +40,7 @@ namespace
     }
 } // namespace
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     glfwSetErrorCallback(errorCallback);
 
     GLFWwindow *window = initialize();
@@ -59,8 +50,7 @@ int main(int argc, char *argv[])
     // Set the clear color to a nice green
     glClearColor(0.15f, 0.6f, 0.4f, 1.0f);
 
-    while (!glfwWindowShouldClose(window))
-    {
+    while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
 
         glfwSwapBuffers(window);
